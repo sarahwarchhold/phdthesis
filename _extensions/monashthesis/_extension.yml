@@ -7,9 +7,20 @@ contributes:
       date-format: "D MMMM YYYY"
       number-depth: 2
       toc-depth: 2
+      toc-title: Contents
       number-sections: true
+      hyperrefoptions:
+      - linktoc=all
+      lof: true #list of figures
+      lot: true #list of tables
+
+
       fig-height: 5
       fig-width: 8
+      editor: source
+      colorlinks: false
+      highlight-style: github
+
       knitr:
         opts_chunk:
           echo: false
@@ -17,33 +28,39 @@ contributes:
           message: false
     pdf:
       documentclass: report
+      classoption: nottoc
       pdf-engine: pdflatex
       papersize: a4
       fontsize: 11pt
       geometry:
-      - top=2.5cm
-      - bottom=2.5cm
-      - left=2.5cm
-      - right=2.5cm
+      - top=25mm
+      - left=25mm
+      - right=30mm
+      - heightrounded
+      - marginparwidth=1.5in
+      - twoside=true
       block-headings: false
-      cite-method: biblatex
-      biblio-style: authoryear-comp
-      colorlinks: true
       linestretch: 1.5
+      include-before-body:
+        - "Frontmatter.tex"
       template-partials:
         - "before-title.tex"
         - "title.tex"
-    html:
-      theme:
-        - cosmo
-        - thesis.scss
-      fontsize: 16px
-      mainfont: "Merriweather, serif"
-      code-link: true
-      toc-title: "<b>Sections</b>"
-      html-math-method: katex
-      published-title: "Last updated"
-      format-resources:
-        - fonts.html
-      include-in-header:
-        file: fonts.html
+      indent: true
+      keep-tex: true
+
+
+    # html:
+    #   theme:
+    #     - cosmo
+    #     - thesis.scss
+    #   fontsize: 16px
+    #   mainfont: "Merriweather, serif"
+    #   code-link: true
+    #   toc-title: "<b>Sections</b>"
+    #   html-math-method: katex
+    #   published-title: "Last updated"
+    #   format-resources:
+    #     - fonts.html
+    #   include-in-header:
+    #     file: fonts.html

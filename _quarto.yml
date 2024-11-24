@@ -2,24 +2,29 @@ project:
   type: book
 
 book:
-  title: "This is my thesis"
-  author: "Susan Su"
+  title: "Mental representations of varietal word forms in children
+and adults"
+  author: "Sarah Warchhold"
   chapters:
     - text: "Front matter"
-      file: index.qmd
+      file: index.qmd #list of abbreviations, index-file need to be included, can be filled with something else, but not renamed
     - "01-chap1.qmd"
     - "02-chap2.qmd"
     - "refs.qmd"
   sidebar:
     style: "docked"
 
-bibliography: thesisrefs.bib
-csl: american-statistical-association.csl
+bibliography: thesisrefs.bib #references.bib
+csl: unified-style-sheet-for-linguistics.csl
+cite-method: citeproc
+link-citations: true
+
 degreetype: Doctor of Philosophy
-submitted: 2024
-affiliation: Department of Econometrics & Business Statistics
-degrees: 'B.Sc. (Hons), University of Tangambalanga'
+submitted: 2025
+affiliation: Faculty of Linguistics
 
 format:
-  monashthesis-html: default
   monashthesis-pdf: default
+  monashthesis-docx: default
+
+papersize: a4
